@@ -1,0 +1,36 @@
+@import "_tema1.scss";
+
+body{
+    font-family: $fuentePrincipal;
+}
+p{
+    font-family: $fuenteSecundaria;
+}
+
+.container{
+    max-width:980px;
+    margin:30px auto;
+}
+
+.caja{
+    width:130px;
+    height:100px;
+    padding:20px;
+    margin-bottom:10px;
+    box-sizing: border-box;
+    background-color: $colorBase;
+    border-radius: $esquinas;
+
+    &.mensaje{
+        background-color: darken($colorBase, 30%)
+    }
+    &.alerta{
+        background-color: lighten($colorBase, 30%)
+    }
+    &.con-sombra{
+        background:#fff;
+        border:1px solid #000;
+        box-shadow: $sombra;
+    }
+}
+

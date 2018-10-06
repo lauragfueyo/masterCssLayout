@@ -1,0 +1,39 @@
+$colorBase1: #ff0000;
+$colorBase2: #00ff00;
+$colorBase3: #0000ff;
+
+$tonos: (
+    1: 10%,
+    2: 25%,
+    3: 30%,
+    4: 40%
+);
+
+@function gradoColor($color, $tipo, $porcentaje) {
+    @if $tipo == 'claro' {
+        @return lighten($color, $porcentaje);
+    } @else if $tipo == 'oscuro' {
+        @return darken($color, $porcentaje);
+    }
+}
+
+@mixin tonalidades($colores){
+    @for $tonoColor from 1 through 4{
+        &.dark#{$tonoColor}{
+            background-color:gradoColor($colores, oscuro, map-get($tonos, $tonoColor));
+        }
+        &.light#{$tonoColor}{
+            background-color:gradoColor($colores, claro, map-get($tonos, $tonoColor));
+        }
+    }
+}
+
+@mixin colorBase($base) {
+    @if $base == "color1" {
+        @include tonalidades($colorBase1);
+    } @else if $base == "color2" {
+        @include tonalidades($colorBase2);
+    } @else if $base == "color3" {
+        @include tonalidades($colorBase3);
+    }
+}
