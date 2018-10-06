@@ -1,0 +1,28 @@
+@import "_functions";
+
+.flex-container{
+    max-width:960px;
+    margin:0 auto 10px;
+    display:flex;
+
+    div{
+        flex: 0 0 90px;
+        padding:70px 0;
+        margin:0 5px;
+        align-content: center;
+        text-align:center;
+        color:#fff;
+        background-color: $colorBase1;
+        @include colorBase(color1);
+    }
+
+    &.color-base2 div{        
+        background-color: $colorBase2;
+        @include colorBase(color2);
+    }
+    &.color-base3 div{
+        background-color: $colorBase3;
+        @include colorBase(color3);
+    }
+
+} 

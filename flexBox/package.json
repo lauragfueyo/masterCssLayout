@@ -1,0 +1,19 @@
+{
+  "name": "flexBox",
+  "version": "1.0.0",
+  "description": "Crear una barra de navegación usando flexbox.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "author": "Laura Gonzalez Fueyo",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-open": "^2.0.0",
+    "gulp-sass": "3.0.0"
+  }
+}

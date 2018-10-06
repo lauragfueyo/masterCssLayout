@@ -1,0 +1,64 @@
+.flex-container {
+  max-width: 960px;
+  margin: 0 auto 10px;
+  display: flex; }
+  .flex-container div {
+    flex: 0 0 90px;
+    padding: 70px 0;
+    margin: 0 5px;
+    align-content: center;
+    text-align: center;
+    color: #fff;
+    background-color: #ff0000; }
+    .flex-container div.dark1 {
+      background-color: #cc0000; }
+    .flex-container div.light1 {
+      background-color: #ff3333; }
+    .flex-container div.dark2 {
+      background-color: maroon; }
+    .flex-container div.light2 {
+      background-color: #ff8080; }
+    .flex-container div.dark3 {
+      background-color: #660000; }
+    .flex-container div.light3 {
+      background-color: #ff9999; }
+    .flex-container div.dark4 {
+      background-color: #330000; }
+    .flex-container div.light4 {
+      background-color: #ffcccc; }
+  .flex-container.color-base2 div {
+    background-color: #00ff00; }
+    .flex-container.color-base2 div.dark1 {
+      background-color: #00cc00; }
+    .flex-container.color-base2 div.light1 {
+      background-color: #33ff33; }
+    .flex-container.color-base2 div.dark2 {
+      background-color: green; }
+    .flex-container.color-base2 div.light2 {
+      background-color: #80ff80; }
+    .flex-container.color-base2 div.dark3 {
+      background-color: #006600; }
+    .flex-container.color-base2 div.light3 {
+      background-color: #99ff99; }
+    .flex-container.color-base2 div.dark4 {
+      background-color: #003300; }
+    .flex-container.color-base2 div.light4 {
+      background-color: #ccffcc; }
+  .flex-container.color-base3 div {
+    background-color: #0000ff; }
+    .flex-container.color-base3 div.dark1 {
+      background-color: #0000cc; }
+    .flex-container.color-base3 div.light1 {
+      background-color: #3333ff; }
+    .flex-container.color-base3 div.dark2 {
+      background-color: navy; }
+    .flex-container.color-base3 div.light2 {
+      background-color: #8080ff; }
+    .flex-container.color-base3 div.dark3 {
+      background-color: #000066; }
+    .flex-container.color-base3 div.light3 {
+      background-color: #9999ff; }
+    .flex-container.color-base3 div.dark4 {
+      background-color: #000033; }
+    .flex-container.color-base3 div.light4 {
+      background-color: #ccccff; }
