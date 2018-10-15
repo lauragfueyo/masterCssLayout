@@ -1,36 +1,62 @@
-@import "_tema1.scss";
-
-body{
-    font-family: $fuentePrincipal;
-}
-p{
-    font-family: $fuenteSecundaria;
-}
+@import "_functions.scss";
 
 .container{
     max-width:980px;
     margin:30px auto;
 }
 
-.caja{
-    width:130px;
+.nota{
+    padding:15px;
+    background:#f2f2f2;
+    text-align:center;
+    color:purple;
+}
+
+.caja-flex{
+    display: flex;
+    justify-content:  space-around;
+}
+
+.item{
+    width:31%;
     height:100px;
     padding:20px;
     margin-bottom:10px;
     box-sizing: border-box;
-    background-color: $colorBase;
-    border-radius: $esquinas;
-
-    &.mensaje{
-        background-color: darken($colorBase, 30%)
-    }
-    &.alerta{
-        background-color: lighten($colorBase, 30%)
-    }
+    text-align:center;
+    color: #fff;
+    
     &.con-sombra{
-        background:#fff;
         border:1px solid #000;
-        box-shadow: $sombra;
+        color: #000;
     }
+
 }
 
+
+@for $tipoTema from 1 through 2{
+    .tema#{$tipoTema}{
+        font-family: cambioTema(tema#{$tipoTema}, fuentePrincipal);
+
+        p{
+            font-family: cambioTema(tema#{$tipoTema}, fuenteSecundaria);
+        }
+
+        .item{
+            background-color: cambioTema(tema#{$tipoTema}, color);
+            border-radius: cambioTema(tema#{$tipoTema}, esquinas);
+
+            &.mensaje{
+                background-color: darken(cambioTema(tema#{$tipoTema}, color), 30%);
+            }
+            &.alerta{
+                background-color: lighten(cambioTema(tema#{$tipoTema}, color), 30%);
+            }
+
+            &.con-sombra{
+                background-color:#fff;
+                box-shadow: cambioTema(tema#{$tipoTema}, sombra);
+            }
+        }
+    }
+}

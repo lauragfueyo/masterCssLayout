@@ -7,7 +7,7 @@
 
 body {
   height: 100%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif; }
 
 .contenedor {
   height: 100%;
@@ -51,5 +51,17 @@ body {
     background: #fff;
     text-decoration: none;
     color: #000; }
-    .navegacion li a:hover {
-      background: pink; }
+  .navegacion li:nth-child(1) a:hover {
+    background: red; }
+  .navegacion li:nth-child(2) a:hover {
+    background: blue; }
+  .navegacion li:nth-child(3) a:hover {
+    background: green; }
+  .navegacion li:nth-child(4) a:hover {
+    background: purple; }
+  .navegacion li:nth-child(5) a:hover {
+    background: yellowgreen; }
+  .navegacion li:nth-child(6) a:hover {
+    background: orange; }
+  .navegacion li:nth-child(7) a:hover {
+    background: pink; }

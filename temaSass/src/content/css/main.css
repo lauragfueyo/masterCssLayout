@@ -1,29 +1,55 @@
-html {
-  font-size: 100%; }
-
-body {
-  font-family: Arial, Helvetica, sans-serif; }
-
-p {
-  font-family: Georgia, "Times New Roman", Times, serif; }
-
 .container {
   max-width: 980px;
   margin: 30px auto; }
 
-.caja {
-  width: 130px;
+.nota {
+  padding: 15px;
+  background: #f2f2f2;
+  text-align: center;
+  color: purple; }
+
+.caja-flex {
+  display: flex;
+  justify-content: space-around; }
+
+.item {
+  width: 31%;
   height: 100px;
   padding: 20px;
   margin-bottom: 10px;
   box-sizing: border-box;
-  background-color: #ff3032;
-  border-radius: 10px; }
-  .caja.mensaje {
-    background-color: #960001; }
-  .caja.alerta {
-    background-color: #ffc9ca; }
-  .caja.con-sombra {
-    background: #fff;
+  text-align: center;
+  color: #fff; }
+  .item.con-sombra {
     border: 1px solid #000;
-    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.8); }
+    color: #000; }
+
+.tema1 {
+  font-family: Arial; }
+  .tema1 p {
+    font-family: "Georgia"; }
+  .tema1 .item {
+    background-color: #ff3032;
+    border-radius: 10px; }
+    .tema1 .item.mensaje {
+      background-color: #960001; }
+    .tema1 .item.alerta {
+      background-color: #ffc9ca; }
+    .tema1 .item.con-sombra {
+      background-color: #fff;
+      box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.8); }
+
+.tema2 {
+  font-family: Trebuchet MS; }
+  .tema2 p {
+    font-family: Verdana; }
+  .tema2 .item {
+    background-color: #2d31ff;
+    border-radius: 25px; }
+    .tema2 .item.mensaje {
+      background-color: #000393; }
+    .tema2 .item.alerta {
+      background-color: #c6c7ff; }
+    .tema2 .item.con-sombra {
+      background-color: #fff;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8); }
