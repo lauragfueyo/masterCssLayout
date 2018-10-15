@@ -1,5 +1,17 @@
+$alto100: 100%;
+$fuentePrincipal: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$colores: (
+  color1: red,
+  color2: blue,
+  color3: green,
+  color4: purple,
+  color5: yellowgreen,
+  color6: orange,
+  color7: pink
+);
+
 :root{
-    height: 100%;
+    height: $alto100;
 }
 *{
     margin:0;
@@ -7,12 +19,12 @@
 }
 
 body{
-    height:100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: $alto100;
+    font-family: $fuentePrincipal;
 }
 
 .contenedor{
-    height:100%;
+    height: $alto100;
     display:flex;
     flex-direction:column;
 }
@@ -45,10 +57,10 @@ body{
     
     li{
         flex-grow: 1;
-        box-sizing:border-box;
-        padding:2px;
-        list-style-type:none;
-        text-align:center;
+        box-sizing: border-box;
+        padding: 2px;
+        list-style-type: none;
+        text-align: center;
         font-family: 'Times New Roman', Times, serif;
 
         &:last-child{
@@ -65,10 +77,17 @@ body{
             background:#fff;
             text-decoration:none;
             color:#000;
-            &:hover{
-                background:pink;
+        }
+
+        
+        @for $posicion from 1 through 7{
+            &:nth-child(#{$posicion}){
+                a:hover{ 
+                    background: map-get($colores, color#{$posicion});
+                }
             }
         }
+
     }
 
 }

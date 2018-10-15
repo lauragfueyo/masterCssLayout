@@ -1,0 +1,16 @@
+
+$alto100: 100%;
+$breakpoints: (
+    s:   47em,
+    m:   70em,
+    l:   80em,
+) !default;
+
+//Mixin para media query
+@mixin respond-to($breakpoint) {
+   @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}

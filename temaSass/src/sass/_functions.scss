@@ -1,0 +1,22 @@
+$temas: (
+    tema1: (
+        color: #ff3032,
+        fuentePrincipal: Arial,
+        fuenteSecundaria: 'Georgia', 
+        esquinas: 10px,
+        sombra: -5px 5px 20px rgba(0,0,0,.8),
+    ),
+    tema2: (
+        color: #2d31ff,
+        fuentePrincipal: Trebuchet MS,
+        fuenteSecundaria: Verdana, 
+        esquinas: 25px,
+        sombra: 5px 5px 20px rgba(0,0,0,.8),
+    )
+);
+
+@function cambioTema($tipo, $valor) {
+        $theme: map-get(map-get($temas, $tipo), $valor);
+		@return $theme;
+};
+
